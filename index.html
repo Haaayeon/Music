@@ -4,35 +4,144 @@
   <title>저의 노래입니다</title>
   <link rel="icon" type="image/png" href="https://asset.cloudinary.com/djahj3ioy/b933381dd7045e7baf739c34ba7051e1">
   <style type="text/css">
-    body{text-align:center;}
-    #wrapper{
-      width:500px;
-      margin:0 auto;
-      border:1px solid #000;
-      text-align: left;
+    body {
+      text-align: center;
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+    }
+    #wrapper {
+      width: 400px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #player {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      background-color: #f1f1f1;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    #progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #ddd;
+      border-radius: 15px;
+    }
+    .play-button {
+      background-color: #ffe3f1;
+      border: none;
+      color: #333;
+      padding: 10px 10px;
+      font-size: 13px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      float: left;
+    }
+    .play-button.playing {
+      background-color: #ffd6e8;
+    }
+    #volume-slider {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 35px;
+    }
+    #volume-slider .volume-icon {
+      font-size: 10px;
+      color: #999;
+      margin-right: 5px;
+    }
+    #volume-slider .slider {
+      flex: 1;
+      margin-left: 5px;
+      margin-right: 5px;
+      height: 10px;
+      background-color: #ffe3f1;
+      border-radius: 5px;
+    }
+    #volume-slider .slider input[type="range"] {
+      width: 100%;
+      height: 100%;
+      -webkit-appearance: none;
+      background-color: transparent;
+      outline: none;
+    }
+    #volume-slider .slider input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: #eea8cc;
+      border-radius: 50%;
+      cursor: pointer;
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
   <div id="wrapper">
-    <h1>The Smile on My Face </h1>
-    <audio id="audioPlayer">
-      <source src="https://asset.cloudinary.com/djahj3ioy/a6e66515baf0881aa6eeb3bc32cbd752" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <button class="play-button" onclick="sound.play()">Play</button>
+    <h1>Sunny Day</h1>
+    <div id="player">
+  <div id="progress-bar"></div>
+</div>
+<button class="play-button" onclick="togglePlay()">재생</button>
+<div id="volume-slider">
+  <div class="slider">
+    <input type="range" min="0" max="1" step="0.01" value="1" onchange="changeVolume()">
   </div>
-  <script>
+</div>
+<script>
     var sound = new Howl({
-      src: ['audio_file.mp3'],
+      src: ['https://res.cloudinary.com/djahj3ioy/video/upload/v1685595233/Sunny_Day_bogqmv.mp3'],
       autoplay: false,
       loop: false,
       volume: 1
     });
 
+    var progressBar = document.getElementById('progress-bar');
     var playButton = document.querySelector('.play-button');
-    playButton.style.backgroundColor = 'pink';
+    var volumeSlider = document.querySelector('#volume-slider input[type="range"]');
+
+    function togglePlay() {
+      if (sound.playing()) {
+        sound.pause();
+        playButton.textContent = '재생';
+      } else {
+        sound.play();
+        playButton.textContent = '정지';
+      }
+      playButton.classList.toggle('playing');
+    }
+
+    sound.on('play', function() {
+      requestAnimationFrame(updateProgressBar);
+    });
+
+    function updateProgressBar() {
+      var progress = (sound.seek() / sound.duration()) * 100;
+      progressBar.style.width = progress + '%';
+      requestAnimationFrame(updateProgressBar);
+    }
+
+    function changeVolume() {
+      sound.volume(volumeSlider.value);
+    }
   </script>
 </body>
 </html>
+    
