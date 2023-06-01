@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>저의 노래입니다</title>
+  <link rel="icon" type="image/png" href="https://asset.cloudinary.com/djahj3ioy/b933381dd7045e7baf739c34ba7051e1">
+  <style type="text/css">
+    body{text-align:center;}
+    #wrapper{
+      width:500px;
+      margin:0 auto;
+      border:1px solid #000;
+      text-align: left;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>The Smile on My Face </h1>
+    <audio id="audioPlayer">
+      <source src="https://asset.cloudinary.com/djahj3ioy/a6e66515baf0881aa6eeb3bc32cbd752" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button class="play-button" onclick="sound.play()">Play</button>
+  </div>
+  <script>
+    var sound = new Howl({
+      src: ['audio_file.mp3'],
+      autoplay: false,
+      loop: false,
+      volume: 1
+    });
+
+    var playButton = document.querySelector('.play-button');
+    playButton.style.backgroundColor = 'pink';
+  </script>
+</body>
+</html>
