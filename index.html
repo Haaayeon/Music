@@ -19,6 +19,33 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+        #sidebar {
+      width: 100px;
+      background-color: #faf1f2;
+      position: fixed;
+      top: 0;
+      bottom: 10;
+      left: 0;
+      overflow-y: auto;
+    }
+     #content {
+       
+     }
+        #sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #sidebar li {
+      margin-bottom: 10px;
+    }
+    #sidebar li a {
+      display: block;
+      padding: 5px;
+     
+      text-decoration: none;
+    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     h1 {
       color: #333;
       font-family: Arial, sans-serif;
@@ -49,10 +76,25 @@
   </style>
 </head>
 <body>
+   
+    <div id="sidebar">
+      <ul>
+        <li>[운하의 도시] 암스테르담 <a href="#amsterdam-day01">Day01 여행의 시작</a></li>
+        <li><a href="#paris-day01">파리 - Day 01</a></li>
+        <li><a href="#rome-day01">로마 - Day 01</a></li>
+        <li><a href="#florence-day01">피렌체 - Day 01</a></li>
+        <li><a href="#milan-day01">밀라노 - Day 01</a></li>
+        <li><a href="#switzerland-day01">스위스 - Day 01</a></li>
+        <li><a href="#vienna-day01">빈 - Day 01</a></li>
+      </ul>
+    </div>
+      <div id="content">
   <h1>Livre Photo de Hayeon en Europe</h1>
   "2주간의 유럽 여행기, 주절주절한 여정에 초대합니다."
+        <section id="amsterdam-day01">
   <div id="wrapper">
     <p>
+     
       <span class="small-text">2022년 12월 11일</span>
       <br>
       <span class="large-text">Day01 여행의 시작 </span>
