@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>저의 노래입니다</title>
+  <title>Livre Photo de Hayeon en Europe</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/djahj3ioy/image/upload/v1685637231/KakaoTalk_20230602_013321660_gjcx4q.png">
   <style type="text/css">
     body {
@@ -21,127 +21,91 @@
     }
     h1 {
       color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .large-text {
       font-size: 24px;
-      margin-bottom: 20px;
+      color: #070B34;
     }
-    #player {
-      position: relative;
-      width: 100%;
-      height: 30px;
-      background-color: #f1f1f1;
-      border-radius: 15px;
-      overflow: hidden;
-      margin-bottom: 20px;
+    .small-text {
+      font-size: 12px;
     }
-    #progress-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: #ddd;
-      border-radius: 15px;
+    .image-size {
+      width: 400px;
+      height: 400px;
     }
-    .play-button {
-      background-color: #ffe3f1;
-      border: none;
-      color: #333;
-      padding: 10px 10px;
-      font-size: 13px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      float: left;
-    }
-    .play-button.playing {
-      background-color: #ffd6e8;
-    }
-    #volume-slider {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-top: 35px;
-    }
-    #volume-slider .volume-icon {
-      font-size: 10px;
-      color: #999;
-      margin-right: 5px;
-    }
-    #volume-slider .slider {
-      flex: 1;
-      margin-left: 5px;
-      margin-right: 5px;
-      height: 10px;
-      background-color: #ffe3f1;
-      border-radius: 5px;
-    }
-    #volume-slider .slider input[type="range"] {
-      width: 100%;
-      height: 100%;
-      -webkit-appearance: none;
-      background-color: transparent;
-      outline: none;
-    }
-    #volume-slider .slider input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 15px;
-      height: 15px;
-      background-color: #eea8cc;
-      border-radius: 50%;
-      cursor: pointer;
+     .divider {
+      border-top: 4px solid #ddd;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
+  <h1>Livre Photo de Hayeon en Europe</h1>
   <div id="wrapper">
-    <h1>Sunny Day</h1>
-    <div id="player">
-  <div id="progress-bar"></div>
-</div>
-<button class="play-button" onclick="togglePlay()">재생</button>
-<div id="volume-slider">
-  <div class="slider">
-    <input type="range" min="0" max="1" step="0.01" value="1" onchange="changeVolume()">
-  </div>
-</div>
-<script>
-    var sound = new Howl({
-      src: ['https://res.cloudinary.com/djahj3ioy/video/upload/v1685595233/Sunny_Day_bogqmv.mp3'],
-      autoplay: false,
-      loop: false,
-      volume: 1
-    });
+    <p>
+      <span class="small-text">2022년 12월 11일</span>
+      <br>
+      <span class="large-text">Day01 여행의 시작 </span>
+    
+    <br><br><br>
+    #1 인천공항 <br><br><br>
+    1. 공항에서 멀티 어댑터 대여 <br><br>
+   아침 7시 20분 인천공항으로 출발~<br>
+    12시 20분 비행기였는데 라운지에서
+    <br>아침 식사를 하려고 일찍 나섰다.<br><br>
 
-    var progressBar = document.getElementById('progress-bar');
-    var playButton = document.querySelector('.play-button');
-    var volumeSlider = document.querySelector('#volume-slider input[type="range"]');
-
-    function togglePlay() {
-      if (sound.playing()) {
-        sound.pause();
-        playButton.textContent = '재생';
-      } else {
-        sound.play();
-        playButton.textContent = '정지';
-      }
-      playButton.classList.toggle('playing');
-    }
-
-    sound.on('play', function() {
-      requestAnimationFrame(updateProgressBar);
-    });
-
-    function updateProgressBar() {
-      var progress = (sound.seek() / sound.duration()) * 100;
-      progressBar.style.width = progress + '%';
-      requestAnimationFrame(updateProgressBar);
-    }
-
-    function changeVolume() {
-      sound.volume(volumeSlider.value);
-    }
-  </script>
+   공항에 도착해서 LG 유플러스에서 <br>
+    멀티 어댑터를 대여했다. <br>
+    (무료, 본인 통신사에서 대여 가능) <br><br>
+    
+그리고 약국에서 채연이의 개인용품을 구입했다. <br>
+환전을 미리 못했는데 공항에서 할까 하다가 <br>
+    현지에서 카드 쓸 생각으로 안 했다! <br>
+    아빠가 주신 달러는 암스테르담에서 환전하기로! <br><br><br>
+    
+    2. 대한항공 라운지 이용 <br><br>
+    
+    <img src="https://blog.kakaocdn.net/dn/bHIdYh/btrZsD5FRqT/cffe3CRKkk3p5pfA6RYR61/img.png" alt="라운지 식사" class="image-size"><br><br>
+      E 티켓이 있지만 다이어리에 붙이고 싶어서<br>
+      일부러 공항 직원분께 부탁해서 종이 티켓 발급 받고<br>
+      배가 고파서 바로 대한항공 라운지로 향했다.<br>
+      라운지는 넓고, 깔끔하고, 짐보관도 잘 되어 있다.<br><br>
+      아침밥이라서 조금, 적당히만 먹었다.<br>
+      난 기내식이 더 기대된다구!!<br><br>
+      그리고 시간이 남아 Nap Zone에서 누워있었다.<br><br>
+      2주 여행이지만 짐을 아주 가볍게 쌌다.<br>
+      입고 간 옷, 그 외로 상하의로 두 세트 더>_<<br>
+      갈 때 롱패딩을 입고 캐리어에 코드를 하나 챙겼다.<br>
+      채연이는 나의 짐이 가벼웠던 이유가<br>
+      본인이 공용짐을 모두 책임졌기 때문이라고 주장한다.<br>
+      (맞는 말..ㅎ)<br>
+      기내용 캐리어 하나에 모든 짐을 쌌는데<br>
+      가볍게 한 이유는 유럽 내에서 기차 이동이 많아<br>
+      큰 캐리어는 번거로울 것 같았다.<br>
+      그리고 짐 많은 거 싫어~~~!
+      <div class="divider"></div>
+    #2 대한항공 네덜란드행 <br><br><br>
+    비지니스 통로를 이용하는 사람이 우리밖에 없어서<br>
+    웃기게 사진을 찍고 있었는데 저끝에 계신 승무원분이랑<br>
+    눈이 마주쳐서 정말 머쓱했다 ^^; <br><br>
+    비행기 탑승할 때 칸에 승무원이 너무 많아서<br>
+    '왜 이렇게 많지?'했는데<br>
+    식사를 코스로 주려면 그럴 수밖에 없었다.<br><br><br>
+    1. 점심식사
+    1:20 메론을 곁들인 프로슈토햄<br><br>
+    <img src=https://blog.kakaocdn.net/dn/bAhfbz/btrZuB0DdJN/rCJ9TZRuSAEJnk5Z1KNA11/img.png" alt="에피타이저"" class="image-size"><br><br>
+    받자마자 메론을 홀랑 먹어버렸다<br>
+    그러고 햄만 먹으려니 신맛, 짠맛이 강해서 힘들었다.<br>
+    원래 같았으면 신 거 안 좋아해서 안 먹었을 텐데 <br>
+    너무 정성스럽게 담아서 주니까 도전해 보았다.<br><br><br>
+    
+    
+    
+    </p> </div>
 </body>
 </html>
-    
