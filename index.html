@@ -10,7 +10,7 @@
     font-family: Arial, sans-serif;
   }
   #wrapper {
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
     border: 1px solid #ddd;
     text-align: center;
@@ -76,9 +76,11 @@
   @media (max-width: 767px) {
     #wrapper {
       width: 100%; /* 너비를 100%로 설정하여 모바일 화면에 맞춥니다. */
+      max-width: 100%; /* 최대 너비도 100%로 설정하여 wrapper가 화면 전체를 차지할 수 있도록 합니다. */
     }
   }
 </style>
+
 
 
 </head>
