@@ -3,77 +3,83 @@
 <head>
   <title>Livre Photo de Hayeon en Europe</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/djahj3ioy/image/upload/v1685637231/KakaoTalk_20230602_013321660_gjcx4q.png">
-  <style type="text/css">
-    body {
-      text-align: center;
-      background-color: #f8f8f8;
-      font-family: Arial, sans-serif;
-    }
+<style type="text/css">
+  body {
+    text-align: center;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  #wrapper {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  #sidebar {
+    width: 100px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    bottom: 10;
+    left: 0;
+    overflow-y: auto;
+  }
+  #content {
+    /* 내용물에 대한 스타일은 추가하지 않습니다. 비율 유지를 위해 크기 지정하지 않습니다. */
+  }
+  #sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #sidebar li {
+    margin-bottom: 10px;
+  }
+  #sidebar li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+  }
+  h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .large-text {
+    font-size: 24px;
+    color: #070B34;
+  }
+  .small-text {
+    font-size: 12px;
+  }
+  .image-size {
+    width: 400px;
+    height: 400px;
+  }
+  .custom-image {
+    width: 400px;
+    height: auto;
+  }
+  .divider {
+    border-top: 4px solid #ddd;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  /* 모바일 화면에 대한 스타일을 적용하는 미디어 쿼리 */
+  @media (max-width: 767px) {
     #wrapper {
-      width: 400px;
-      margin: 0 auto;
-      border: 1px solid #ddd;
-      text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%; /* 너비를 100%로 설정하여 모바일 화면에 맞춥니다. */
     }
-        #sidebar {
-      width: 100px;
-      background-color: #f0f0f0;
-      position: fixed;
-      top: 0;
-      bottom: 10;
-      left: 0;
-      overflow-y: auto;
-    }
-     #content {
-       
-     }
-        #sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    #sidebar li {
-      margin-bottom: 10px;
-    }
-    #sidebar li a {
-      display: block;
-      padding: 5px;
-     
-      text-decoration: none;
-    }
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    h1 {
-      color: #333;
-      font-family: Arial, sans-serif;
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .large-text {
-      font-size: 24px;
-      color: #070B34;
-    }
-    .small-text {
-      font-size: 12px;
-    }
-    .image-size {
-      width: 400px;
-      height: 400px;
-    }
-     .custom-image {
-      width: 400px;
-      height: auto;
-    }
-     .divider {
-      border-top: 4px solid #ddd;
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-  </style>
+  }
+</style>
+
 </head>
 <body>
    
@@ -302,6 +308,6 @@
       
       
       
-       </p> </div>
+   </p> </div>     
 </body>
 </html>
